@@ -7,25 +7,55 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   
   <title>Frontend Mentor | Meet landing page</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.
-
-  Download v1.3
-  What is it?
-
-  01
-  Built for modern use
-
-  Smarter meetings, all in one place
-
-  Send messages, share files, show your screen, and record your meetings — all in one 
-  workspace. Control who can join with invite-only team access, data encryption, and data export.
-
-  02
-  Experience more together
-  Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.
-
-  Download v1.3
+  <header>
+    <img class="logo" src="./assets/logo.svg" alt="logo">
+    <img class="img_hero" src="./assets/tablet/image-hero.png" alt="hero-image">
+  </header>
+  <main>
+    <section class="hero">
+        <img class="img__hero-left" src="./assets/desktop/image-hero-left.png" alt="">
+        <div class="hero__details">
+          <h1 class="text__preset1">Group Chat for Everyone</h1>
+          <h2 class="text__preset4">Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.</h2>
+          <div class="hero__action-buttons">
+            <a class="button button__cyan text__preset5" href="#">Download <span>v1.3</span></a>
+            <a class="button button__purple text__preset5" href="#">What is it?</a>       
+          </div>
+        </div>
+        <img class="img__hero-right" src="./assets/desktop/image-hero-right.png" alt="">
+    </section>
+    <section class="gallery">
+      <div class="section__marker">
+        <div class="section__line"></div>
+        <span class="section__number text__preset5">01</span>
+      </div>
+      <div class="gallery__photo">
+        <img src="./assets/desktop/image-woman-in-videocall.jpg" alt="">
+        <img src="./assets/desktop/image-women-videochatting.jpg" alt="">
+        <img src="./assets/desktop/image-men-in-meeting.jpg" alt="">
+        <img src="./assets/desktop/image-man-texting.jpg" alt="">
+      </div>
+      <div class="app__details">
+        <h2 class="app__statement text__preset3">Built for modern use</h2>
+        <h3 class="app__slogan text__preset2">Smarter meetings, all in one place</h3>
+        <p class="app__description text__preset4">Send messages, share files, show your screen, and record your meetings — all in one 
+          workspace. Control who can join with invite-only team access, data encryption, and data export.</p>
+      </div>
+    </section>
+    <section class="experience full-bleed">
+      <div class="section__marker">
+        <div class="section__line"></div>
+        <span class="section__number text__preset5">02</span>
+      </div>
+      <div class="experience__details">
+        <h1 class="text__preset2">Experience more together</h1>
+        <h2 class="text__preset4">Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.</h2>
+        <a class="button button__purple text__preset5" href="#">Download v1.3</a>
+      </div>
+    </section>
+  </main>
 </body>
 </html>

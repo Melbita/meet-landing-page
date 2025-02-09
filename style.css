@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root{
+
+
+  /* Colors */
+  --color-cyan-600: #4D96A9;
+  --color-cyan-600-rgb: 77,150,169;
+  --color-cyan-300: #8FE3F9;  
+  --color-purple-600: #855FB1;
+  --color-purple-300: #D9B8FF; 
+  --color-slate-900: #28283D;  
+  --color-slate-600: #87879D;
+  --color-slate-300: #D1D1DF;
+  --color-white: #FAFAFA;
+
+  /* Spacing */
+  --spacing-small: 1rem; /* 16px */
+  --spacing-medium: 1.5rem; /* 24px */
+  --spacing-big: 2rem; /* 32px */
+  --spacing-large: 3rem; /* 48px */
+  --spacing-ultra: 4rem; /* 64px */
+}
+
+html,body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Red Hat Display", Helvetica, sans-serif;
+}
+
+h1,h2,h3{
+  margin: 0;
+  padding: 0;
+}
+
+.text__preset1{
+  font-size: 4rem;
+  line-height: 110%;
+  font-weight: 900;
+}
+
+.text__preset2{
+  font-size: 2.5rem;
+  line-height: 110%;
+  font-weight: 900;  
+}
+
+.text__preset3{
+  line-height: 110%;
+  letter-spacing: 4px;
+}
+
+.text__preset4{
+  font-size: 1.125rem;
+  line-height: 110%;
+  font-weight: 500;
+}
+
+.text__preset5{
+  line-height: 150%;
+  font-weight: 900;
+}
+
+.button{
+  border-radius: 50px;
+  display: inline-block;
+  color: var(--color-white);
+  text-decoration: none;
+  padding: 1.3rem 2.5rem;
+  width: fit-content;;
+
+
+  &.button__cyan{
+    background-color: var(--color-cyan-600);
+
+    &:hover{
+      background-color: var(--color-cyan-300);
+    }
+  }
+
+  &.button__purple{
+    background-color: var(--color-purple-600);
+
+    &:hover{
+      background-color: var(--color-purple-300);
+    }
+  }
+}
+
+header{
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-ultra);
+  margin: var(--spacing-large) 0;
+
+  .logo{
+    align-self: center;
+  }
+}
+
+main{
+  padding: var(--spacing-large) 0;
+  display: grid;
+  grid-template-rows: repeat(autofill, auto);
+  grid-template-columns: 1.094rem 1fr 1.094rem;
+  gap: var(--spacing-ultra) 0;
+  height: 100%;
+
+  &> *{
+    grid-column: 2;
+  }
+  
+}
+
+section{
+  display: grid;
+  grid-template-rows: auto auto auto;
+  gap: var(--spacing-medium);
+  text-align: center;
+}
+
+.hero{
+
+  .hero__details{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: var(--spacing-medium);
+    text-align: center;
+
+    h1{
+      color: var(--color-slate-900)
+    }
+  
+    h2{
+      font-weight: 500;
+      line-height: 150%;
+      color: var(--color-slate-600)
+    }
+  
+    .hero__action-buttons{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+
+}
+
+.section__marker{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .section__line{
+    width: 1px;
+    height: 80px;
+    background-color: var(--color-slate-300);
+    text-align: center;
+  }
+  .section__number{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border: 1px solid var(--color-slate-300);
+    border-radius: 50%;
+    background-color: var(--color-white);
+    color: var(--color-slate-600)
+  }
+}
+
+.gallery{
+  gap: var(--spacing-ultra);
+
+  img{
+    max-inline-size: 100%;
+    block-size: auto;
+    border-radius: 20px;
+  }
+
+  .gallery__photo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: var(--spacing-small);
+  }
+
+  .app__details{
+
+    .app__statement{
+      text-transform: uppercase;
+      font-size: 12px;
+      color: var(--color-cyan-600);
+      font-weight: 900;
+    }
+
+    .app__slogan{
+      margin-top: var(--spacing-smallh);
+      color: var(--color-slate-900)
+    }
+
+    .app__description{
+      margin-top: var(--spacing-big);
+      color: var(--color-slate-600);
+    }
+  }
+}
+
+.experience{ 
+  margin-top: 110px;
+  position: relative;
+  background:linear-gradient(0deg, rgba(var(--color-cyan-600-rgb),0.9), rgba(var(--color-cyan-600-rgb),0.9)), url(./assets/mobile/image-footer.jpg) no-repeat; 
+  background-size: 100% 100%;
+  color: var(--color-white);
+  .section__marker{
+    position: absolute;
+    top: -110px;
+    left: calc(50% - 23px)
+  }
+
+  .experience__details{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: var(--spacing-medium);
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    padding: var(--spacing-ultra);
+  }
+}
+
+.full-bleed {
+  grid-column: 1 / -1;
+}
+
+.img__hero-right,.img__hero-left{
+  display: none;    
+}
+
+@media (min-width: 500px){
+  main{
+    grid-template-columns: 2rem 1fr 2rem;
+  }
+
+  .hero,.app__details{
+    max-width: 550px;
+    margin: auto;
+
+    .hero__details{
+      .hero__action-buttons{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  .experience{ 
+    background:linear-gradient(0deg, rgba(var(--color-cyan-600-rgb),0.9), rgba(var(--color-cyan-600-rgb),0.9)), url(./assets/desktop/image-footer.jpg) no-repeat; 
+    background-size: 100% 100%;
+  }
+  .gallery{
+    .gallery__photo{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--spacing-small);
+    }
+  }
+}
+
+@media (min-width: 900px){
+  main{
+    grid-template-columns: 4.5rem 1fr 4.5rem;
+  }
+  
+  .gallery,.experience__details{
+    max-width: 1120px;
+    margin: auto;
+  }
+
+  .img_hero{
+    display: none;
+  }
+
+  .img__hero-right,.img__hero-left{
+    display: block;    
+  }
+
+  .hero{
+    max-width: none;
+    grid-template-columns: auto 1fr auto;
+    grid-row: initial;
+    grid-column: 1 / -1;
+    justify-content: center;
+    align-items: center;
+
+    .hero__details{
+      min-width: 450px;
+    }
+
+    img{
+      max-inline-size: 100%;
+      block-size: auto;
+    }
+  }
+
+  .experience{
+    .experience__details{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: initial;
+    }
+  }
+}
